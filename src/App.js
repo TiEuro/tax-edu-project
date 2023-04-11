@@ -29,6 +29,7 @@ function App() {
             </BrowserRouter>
         
     </div>
+    <div className="taxlogo" />
     </div>
     </Styles>
 
