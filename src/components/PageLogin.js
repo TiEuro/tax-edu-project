@@ -255,7 +255,7 @@ function PageLogin({setAuth}) {
                   />
                 
                 </FormGroup>
-                <PrivateRoute info={state}/>
+
               </Form>
               <Row>
                     <Col md={2}></Col>

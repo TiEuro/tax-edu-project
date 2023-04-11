@@ -16,7 +16,7 @@ function validar_renda() {
   const profissao = document.getElementById("profissao");
   const renda = document.getElementById("renda");
 
-    if (profissao.value === 'Selecione')  {
+    if (profissao.value === '')  {
         var rendaAlert = document.getElementById("rendaAlert");
         rendaAlert.className = "alert alert-danger fade show";
         rendaAlert.hidden = false;
@@ -105,11 +105,8 @@ const QuizV2 = () => (
                         </Label>
                     </div>
                     <div>
-                        <Field as="select" name="profissao" id="profissao" className="form-control" data-live-search="true">
-                            <option value="Selecione" label="Selecione sua Profissão"></option>
-                            <option value="Eletricista">Eletricista</option>
-                            <option value="Jogador de Futebol">Jogador de Futebol</option>
-                            <option value="Engenheiro">Engenheiro</option>
+                        <Field name="profissao" id="profissao" type="text" className="form-control" data-live-search="true">
+
                         </Field>
                     </div>
                 </Col>

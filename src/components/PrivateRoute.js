@@ -4,12 +4,12 @@ import {Outlet, Navigate} from 'react-router-dom'
 import swapPage from './Swap';
 
 
-function PrivateRoute(state) {
+function PrivateRoute({state}) {
   
-  
+  console.log(state)
   if (state) {    
 
-    console.log(state)
+    
     return<Outlet/>;
   } 
   else {
