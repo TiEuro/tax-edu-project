@@ -28,12 +28,22 @@ function validar_renda() {
         rendaAlert.className = "alert alert-danger fade show";
         var rendaMessage = document.getElementById("rendaMessage");
         rendaMessage.textContent = "Não esqueça de preencher sua renda!";
-    } else if (profissao.value !== 'Selecione' && (renda.value > 0 && renda.value < 16567.20 ))    {
+    } else if (profissao.value !== '' && (renda.value > 0 && renda.value < 16567.20 ))    {
         var rendaAlert = document.getElementById("rendaAlert");
         rendaAlert.hidden = false;
         rendaAlert.className = "alert alert-danger fade show";
         var rendaMessage = document.getElementById("rendaMessage");
+        console.log(renda.value)
         rendaMessage.textContent = "Você sonha ser um(a) " + profissao.value + " e ganhar menos que 1 salário mínimo por mês?";
+    }
+
+    else if (profissao.value !== '' && (renda.value > 0 && renda.value > 16567.20 ))    {
+        var rendaAlert = document.getElementById("rendaAlert");
+        rendaAlert.hidden = false;
+        rendaAlert.className = "alert alert-success fade show";
+        var rendaMessage = document.getElementById("rendaMessage");
+        var rendaMensal = renda.value/12;
+        rendaMessage.textContent = "Você sonha ser um(a) " + profissao.value + " e ganhar (em média) "+ rendaMensal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) +" por mês!";
     }
     // Validação Eletricista
     if (renda.value >=16567.20 && profissao.value === 'Eletricista')  {

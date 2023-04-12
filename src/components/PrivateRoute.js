@@ -1,11 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {Outlet, Navigate} from 'react-router-dom'
 import swapPage from './Swap';
 
 
-function PrivateRoute({state}) {
-  
+
+function PrivateRoute() {
+  let state = true;
+
   console.log(state)
   if (state) {    
 

@@ -7,7 +7,7 @@ export const Styles = styled.div
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: 25%, auto;
-        margin-top: 5px;
+        margin-top: 10px;
 
    }
 

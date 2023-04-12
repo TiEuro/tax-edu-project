@@ -9,8 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer,toast  } from 'react-toastify';
 
 
-
-
 function validaGmail(){
   const email = document.getElementById('email');
   if (email.value === '')  {
@@ -141,8 +139,6 @@ const formInit = {
 
 function PageLogin({setAuth}) {
   const navigate = useNavigate();
-  
-
   const [gmail,setGmail] = useState('');
   const [nome,setNome] = useState('');
   const [idade,setIdade] = useState('');
@@ -185,6 +181,8 @@ function PageLogin({setAuth}) {
     
 } 
   const isButtonDisabled = !gmail || !nome || !idade;
+
+
   
   return (
     <div>

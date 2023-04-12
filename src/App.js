@@ -6,6 +6,7 @@ import PageLogin from "./components/PageLogin";
 import {BrowserRouter as Router, Routes, Route, BrowserRouter, useNa} from 'react-router-dom'
 import PrivateRoute from "./components/PrivateRoute";
 import PrivateRoutesblock from "./components/PrivateRoutesblock";
+import FunTime from "./components/funcTime";
 
 
 function App() {
@@ -21,15 +22,17 @@ function App() {
             <BrowserRouter>
             <Routes>
             <Route path="/Registro" element={<PageLogin/>} /> 
+            <Route path="/Tempo" element={<FunTime/>} /> 
+            
                     
-            <Route path="/" element={<PrivateRoutesblock/>} >              
+            <Route path="/" element={<PrivateRoute/>} >              
                 <Route path="Quiz" element={<QuizV2/>}/>
               </Route>                
             </Routes>
             </BrowserRouter>
         
     </div>
-    <div className="taxlogo" />
+    
     </div>
     </Styles>
 
